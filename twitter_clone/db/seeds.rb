@@ -32,3 +32,23 @@ users.each do |user|
     location:   user[:location]
   )
 end
+
+posts = [
+  {
+    user_id: 1,
+    content: "Wow",
+    created_at: Time.now,
+    updated_at: Time.now
+  }
+]
+
+
+
+posts.each do |post|
+  Post.create!(
+    user_id: post[:user_id],
+    content: post[:content],
+    created_at: post[:created_at],
+    updated_at: post[:updated_at]
+  )
+end
